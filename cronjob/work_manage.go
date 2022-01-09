@@ -2,7 +2,7 @@ package crontab
 
 type CronWorkFactory interface {
 	InitCronWorkFactoryCapacity(int32) CronWorkFactory
-	RegisterWork(work Work) CronWorkFactory
+	RegisterWork(work CronWork) CronWorkFactory
 	GetWorkStateByIdentity(id uint32) TaskState
 	ContinueTargetWork(id uint32)
 	StartWorkByByIdentity(id uint32) CronWorkFactory
