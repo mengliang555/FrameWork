@@ -7,7 +7,7 @@ import (
 
 type ReliableEventFactory interface {
 	// 注册可靠事件
-	RegisterEvent(ctx context.Context,handlerName string,payload reflect.Type,behave func(ctx context.Context),isAsynchronous  bool)
+	RegisterEvent(ctx context.Context, handlerName string, payload reflect.Type, behave func(ctx context.Context), isAsynchronous bool)
 
 	// 运行可靠事件-》异步 or 同步根据参数决定
 	StartService(ctx context.Context)
